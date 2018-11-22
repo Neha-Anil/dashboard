@@ -1,0 +1,16 @@
+.vid{
+	margin-left: 20px;
+	margin-top:0px;
+	margin-right:20px;
+	margin-bottom: 10px;
+	border:solid white;
+	width:46vw;
+	height:42vh;
+	background:#D7E7F7;
+}
+.head{
+	text-align: center;
+	font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#15599D;
+	text-shadow: 1px 1px 0px, rgba(0,0,0,0.15);
+}

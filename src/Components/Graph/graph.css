@@ -1,0 +1,26 @@
+.gra{
+	margin-left: 20px;
+	margin-top:0px;
+	margin-right:20px;
+	margin-bottom: 10px;
+	border:solid white;
+	width:46vw;
+	height:42vh;
+	background:#D7E7F7;
+}
+.head{
+	text-align: center;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, seri;
+	color:#15599D;
+	position:relative;
+	bottom:15px;
+}
+.graph{
+	position:absolute;
+	z-index: 2;
+
+}
+.bg{
+	background-image: url('./icons8-gears-96.png');
+	background-repeat: no-repeat;
+}
