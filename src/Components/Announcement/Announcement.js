@@ -1,29 +1,17 @@
 import React from 'react';
 import './ann.css';
-import Chart from 'react-apexcharts'
+
 class Announcement extends React.Component{
 	constructor(props) {
     super(props);
 
-    this.state = {
-      options: {
-        chart: {
-          id: 'apexchart-example'
-        },
-        xaxis: {
-          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
-        }
-      },
-      series: [{
-        name: 'series-1',
-        data: [30, 40, 45, 50, 49, 60, 70, 91]
-      }]
     }
-  }
        
 	render(){
 	return (
-      <Chart options={this.state.options} series={this.state.series} type="bar" width={500} height={320} />
+      <div className='ann br2 shadow-3'>
+      <div className='head'><h1>Organizational Announcement</h1></div>
+      <center><i><h2 className='an'>Let's meet the deadline soon!</h2></i></center></div>
     )
 	}
 }
