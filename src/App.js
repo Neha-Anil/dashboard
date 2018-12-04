@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import Navigation from './Components/Navigation/Navigation';
 import Logo from './Components/Logo/Logo';
-import Intro from './Components/Intro/Intro';
 import Announcement from './Components/Announcement/Announcement';
 import Graph from './Components/Graph/Graph';
-import Video from './Components/Video/Video';
 import SignIn from './Components/SignIn/SignIn';
 import Register from './Components/Register/Register';
 import './App.css';
@@ -52,15 +50,9 @@ class App extends Component {
       
       {
       this.state.route==='home'?
-      <div className='outerbox'>
-      <div style={{display:'flex'}}>
-      <Graph />
-      <Video />
-      </div>
-      <div style={{display:'flex',}}>
-      <Intro name={this.state.user.name} date={this.state.user.logindate} id={this.state.user.id} des={this.state.user.desig} time={this.state.user.logintime}/>
-      <Announcement />
-      </div>
+      <div className='outerbox br2'>
+      <Graph/>
+      <Announcement/>
       </div>
       :(this.state.route==='register'?
         <div>

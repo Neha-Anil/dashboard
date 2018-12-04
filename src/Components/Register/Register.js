@@ -26,18 +26,7 @@ class Register extends React.Component{
 	onDesignationChange=(event)=>{
 		this.setState({designation:event.target.value})
 	}
-	onImageChange=(event)=>{
-		this.setState({opimage:document.getElementById('image').files[0]})
-		fetch('http://localhost:3000/image',{
-			method:'post',
-			headers:{'Content-Type':'multipart/form-data'},
-			body:JSON.stringify({
-				id:this.state.id,
-				opimage:this.state.opimage
-			})
-		})
-		
-	}
+	
 
 	onSubmitSignIn=()=>{
 		if(!this.state.id || !this.state.password|| !this.state.name || !this.state.designation){
@@ -47,7 +36,7 @@ class Register extends React.Component{
 			alert('Password must be minimum 8 characters with a number and a special character')
 		}
 		else{
-		fetch('http://localhost:3000/register',{
+		fetch('http://localhost:3000/mregister',{
 			method:'post',
 			headers:{'Content-Type':'application/json'},
 			body:JSON.stringify({
@@ -59,8 +48,11 @@ class Register extends React.Component{
 		})
 		.then(response=>response.json())
 		.then(user=>{
-			if(user.op_id){
+			if(user.m_id){
 				this.props.onRouteChange('signin');
+			}
+			else{
+				alert('Cannot register!');
 			}
 		})
 		}
@@ -81,7 +73,7 @@ class Register extends React.Component{
 	        name="name"  id="name"/>
 	      </div>
 	      <div className="mt3">
-	        <label className="db fw6 lh-copy f6" htmlFor="op-id">Operator-Id</label>
+	        <label className="db fw6 lh-copy f6" htmlFor="op-id">Manager-Id</label>
 	        <input 
 	        onChange={this.onIdChange}
 	        className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
@@ -95,14 +87,6 @@ class Register extends React.Component{
 	        className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
 	        type="text" 
 	        name="des"  id="des"/>
-	      </div>
-	      <div className="mt3">
-	        <label className="db fw6 lh-copy f6" htmlFor="image">Upload Image</label>
-	        <input 
-	        onChange={this.onImageChange}
-	        className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
-	        type="file" 
-	        name="opimage"  id="image"/>
 	      </div>
 	      <div className="mv3">
 	        <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>

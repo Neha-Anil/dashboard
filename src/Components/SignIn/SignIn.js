@@ -18,7 +18,7 @@ class SignIn extends React.Component{
 	}
 
 	onSubmitSignIn=()=>{
-		fetch('http://localhost:3000/signin',{
+		fetch('http://localhost:3000/msignin',{
 			method:'post',
 			headers:{'Content-Type':'application/json'},
 			body:JSON.stringify({
@@ -28,9 +28,12 @@ class SignIn extends React.Component{
 		})
 		.then(response=>response.json())
 		.then(user=>{
-			if(user.op_id){
+			if(user.m_id){
 				this.props.loadUser(user);
 				this.props.onRouteChange('home');
+			}
+			else{
+				alert('Wrong credentials!');
 			}
 		})
 		
@@ -43,7 +46,7 @@ class SignIn extends React.Component{
 	    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
 	      <center><legend className="f1 fw6 ph0 mh0">Sign In</legend></center>
 	      <div className="mt3">
-	        <label className="db fw6 lh-copy f6" htmlFor="opid">Operator-Id</label>
+	        <label className="db fw6 lh-copy f6" htmlFor="opid">Manager-Id</label>
 	        <input 
 	        onChange={this.onIdChange}
 	        className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
