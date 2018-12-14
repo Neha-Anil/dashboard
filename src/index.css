@@ -6,7 +6,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
   background:linear-gradient(to right,#471C6D 0%,#92a8d1 100%);
+=======
+  background:linear-gradient(to right,#034f84 0%,#92a8d1 100%);
+>>>>>>> 72e78e608f83fe5a08669133527426dad33ed36c
 }
 
 code {

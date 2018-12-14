@@ -33,7 +33,11 @@ class SignIn extends React.Component{
 				this.props.onRouteChange('home');
 			}
 			else{
+<<<<<<< HEAD
 				alert('Wrong credentials!');
+=======
+				alert('wrong credentials!');
+>>>>>>> 72e78e608f83fe5a08669133527426dad33ed36c
 			}
 		})
 		

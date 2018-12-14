@@ -10,6 +10,7 @@
 .an{
 	color:#034f84;
 	font-family: Georgia;
+<<<<<<< HEAD
 }
 .pat {
   border: none;
@@ -33,4 +34,6 @@
 	margin-left: 1vh;
 	margin-top:1vh;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, seri;
+=======
+>>>>>>> 72e78e608f83fe5a08669133527426dad33ed36c
 }

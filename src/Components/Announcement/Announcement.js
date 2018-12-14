@@ -5,6 +5,7 @@ class Announcement extends React.Component{
 	constructor(props) {
     super(props);
 
+<<<<<<< HEAD
 
     }
    onAnnChange=(event)=>{
@@ -32,6 +33,16 @@ class Announcement extends React.Component{
     </div>
     </div>
     );
+=======
+    }
+       
+	render(){
+	return (
+      <div className='ann br2 shadow-3'>
+      <div className='head'><h1>Organizational Announcement</h1></div>
+      <center><i><h2 className='an'>Let's meet the deadline soon!</h2></i></center></div>
+    )
+>>>>>>> 72e78e608f83fe5a08669133527426dad33ed36c
 	}
 }
 export default Announcement;
